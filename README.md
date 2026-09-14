@@ -4,12 +4,12 @@ A pixel-matched, fully responsive interior design studio landing page — built 
 
 **Live site:** [interio.codespanda.com](https://interio.codespanda.com/)
 
-![Interio Design Studio — screenshot](./docs/screenshot.png)
+![Interio Design Studio — screenshot](./docs/screenshot.webp)
 
 <details>
 <summary>Full-page screenshot</summary>
 
-![Interio Design Studio — full page](./docs/screenshot-full.png)
+![Interio Design Studio — full page](./docs/screenshot-full.webp)
 
 </details>
 
