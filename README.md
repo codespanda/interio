@@ -1,32 +1,66 @@
-# React + TypeScript + Vite
+# Interio Design Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A pixel-matched, fully responsive interior design studio landing page — built with React, Vite, Tailwind CSS v4, and shadcn/ui.
 
-Currently, two official plugins are available:
+**Live site:** [interio.codespanda.com](https://interio.codespanda.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Interio Design Studio — screenshot](./docs/screenshot.png)
 
-## React Compiler
+<details>
+<summary>Full-page screenshot</summary>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Interio Design Studio — full page](./docs/screenshot-full.png)
 
-## Expanding the Oxlint configuration
+</details>
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Sections
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- Sticky header with mobile nav
+- Hero with feature highlights
+- Services grid
+- Portfolio / "Spaces We've Transformed" gallery
+- 5-step process timeline
+- About + stats panel
+- Client testimonials
+- Blog preview + consultation CTA
+- Footer with newsletter signup
+
+## Tech Stack
+
+- [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/) for dev/build tooling
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/) (`button`, `card`, `badge`, `avatar`, `separator`, `input`)
+- [lucide-react](https://lucide.dev/) icons
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Open [http://localhost:5173](http://localhost:5173).
+
+### Build
+
+```bash
+npm run build
+```
+
+Outputs a production build to `dist/`.
+
+## Deployment
+
+Deployed automatically to GitHub Pages via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) on every push to `main`, serving from the custom domain `interio.codespanda.com` (see `public/CNAME`).
+
+## Project Structure
+
+```
+src/
+  components/
+    site/      # Page sections (Header, Hero, Services, Portfolio, ...)
+    ui/         # shadcn/ui primitives
+  lib/          # Utilities (cn helper)
+  index.css     # Tailwind + design tokens
+```
